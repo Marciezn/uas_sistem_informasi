@@ -1,0 +1,161 @@
+/* ====== Sidebar & Layout ====== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1f3765;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo img {
+  width: 55px;
+  margin-right: 10px;
+}
+
+.logo-text h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.logo-text p {
+  margin: 0;
+  font-size: 13px;
+  color: #dcdcdc;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.menu li {
+  margin-bottom: 15px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.menu li.active a {
+  background-color: #405b8c;
+}
+
+.menu li a i {
+  margin-right: 10px;
+}
+
+.menu li.active a,
+.menu li a:hover {
+  background-color: #405b8c;
+}
+
+/* ====== Main Content ====== */
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.btn-tambah {
+  background-color: #1f3765;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  margin: 20px 0;
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-tambah i {
+  margin-right: 6px;
+}
+
+.btn-tambah:hover {
+  background-color: #304f8c;
+}
+
+/* ====== Table ====== */
+.tabel-pengguna {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tabel-pengguna th,
+.tabel-pengguna td {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.tabel-pengguna th {
+  background-color: #e8e8e8;
+  font-weight: 600;
+}
+
+.btn-edit {
+  background-color: #f8c400;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-hapus {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 300px;
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+}
+
+footer b {
+  color: #375a9e;
+}
+

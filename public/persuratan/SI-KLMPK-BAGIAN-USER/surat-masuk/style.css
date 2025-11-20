@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+body {
+  margin: 0;
+  background: #f5f7fa;
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1c3b63;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.sidebar .logo img {
+  width: 40px;
+}
+
+.sidebar h2 {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar .menu {
+  color: white;
+  text-decoration: none;
+  background: transparent;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar .menu:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* MAIN CONTENT */
+.main {
+  flex: 1;
+  background: white;
+  padding: 30px 40px;
+  position: relative; /* penting agar tombol logout bisa di pojok */
+}
+
+h1 {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: 500;
+  color: #333;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"] {
+  padding: 10px;
+  border: none;
+  background-color: #d8e4f3;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn.simpan {
+  background-color: #2e7d32;
+}
+
+.btn.kembali {
+  background-color: #757575;
+}
+
+/* Tombol logout bundar merah */
+.logout-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: #b91c1c;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #dc2626;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 12px;
+  text-align: center;
+  color: #777;
+}

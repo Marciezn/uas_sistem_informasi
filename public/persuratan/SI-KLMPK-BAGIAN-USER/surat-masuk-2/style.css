@@ -1,0 +1,153 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background: #e5e5e5;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background: #14334E;
+    color: white;
+    padding: 20px;
+    position: fixed;
+}
+
+/* --- REVISI UNTUK LOGO SIP (Sidebar - Tetap) --- */
+.logo {
+    display: flex; /* Menggunakan Flexbox untuk menata logo dan teks */
+    align-items: center; /* Menyelaraskan item secara vertikal di tengah */
+    gap: 10px; /* Jarak antara gambar logo dan teks */
+    padding: 10px 0; /* Tambahkan sedikit padding */
+}
+
+.logo img {
+    /* Mengatur ukuran gambar logo */
+    width: 40px; /* Atur lebar sesuai keinginan Anda */
+    height: 40px; /* Atur tinggi agar proporsional */
+}
+
+.logo span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+/* --- AKHIR REVISI LOGO SIP (Sidebar) --- */
+
+
+.menu {
+    list-style: none;
+    margin-top: 40px;
+}
+
+.menu li {
+    padding: 15px 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.menu li.active {
+    background: #5da3c6;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Content */
+.content {
+    margin-left: 280px;
+    padding: 30px;
+    width: calc(100% - 280px);
+    position: relative; /* Penting untuk penempatan absolute logo background */
+    overflow: hidden; /* Mencegah elemen pseudo-logo meluber keluar dari content */
+}
+
+/* ================================================================= */
+/* *** PENAMBAHAN UNTUK LOGO BACKGROUND BESAR DAN BURAM *** */
+.content::before {
+    content: "SIP"; /* Teks yang ditampilkan sebagai logo background */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Memastikan teks berada di tengah area konten */
+    font-size: 300px; /* Atur ukuran teks logo sangat besar */
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.1); /* Warna putih buram (10% opacity) */
+    pointer-events: none; /* Penting! Memastikan teks tidak menghalangi klik pada elemen di atasnya */
+    z-index: 1; /* Pastikan di bawah elemen konten utama */
+}
+/* ================================================================= */
+
+.card {
+    /* Menaikkan z-index card agar pasti berada di atas logo background */
+    background: #1e3d63;
+    color: rgb(255, 255, 255);
+    padding: 30px 40px;
+    border-radius: 15px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative; /* Agar z-index bekerja relatif terhadap .content */
+    z-index: 2; /* Pastikan card berada di atas pseudo-element (z-index: 1) */
+}
+
+.info {
+    font-size: 18px;
+}
+
+/* Penyesuaian untuk Scrollable Image Area (dari diskusi sebelumnya) */
+.image-area {
+    max-height: 70vh; 
+    overflow-y: auto;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.image-area img {
+    width: 100%;
+    border: none;
+    cursor: zoom-in;
+    display: block;
+}
+
+.btn-area {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-hapus {
+    background: #d92121;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-kembali {
+    background: #6e6e6e;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+}

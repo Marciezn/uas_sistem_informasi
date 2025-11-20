@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Persuratan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="surat-masuk-user.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <a href="#" class="logo-link">
+                    <img src="logo sip.png" alt="Logo SIP" class="logo-image">
+                </a>
+                <span class="system-name">Sistem Informasi Persuratan</span>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item">
+                    <i class="fas fa-home"></i> Dashboard
+                </a>
+                <a href="#" class="menu-item active">
+                    <i class="fas fa-envelope-open-text"></i> Surat Masuk
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-envelope"></i> Surat Keluar
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-folder"></i> Riwayat
+                </a>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <header class="navbar">
+                <h1 class="page-title">Surat Masuk</h1>
+                
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </header>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>File</th>
+                            <th>No. Surat</th>
+                            <th>Tanggal</th>
+                            <th>Tujuan</th>
+                            <th>Perihal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td> <td>123/900/2000/1</td>
+                            <td>19/09/2025</td>
+                            <td>Alex admin</td>
+                            <td>Surat Kontrak</td>
+                            <td class="actions">
+                                <button class="aksi-btn blue">Lihat</button>
+                                <button class="aksi-btn red">Hapus</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="app-footer">
+        copyright ©2025 Sistem.Informasi.Persuratan. All right reserved
+    </footer>
+
+    <script src="surat-masuk-user.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Pengguna | Sistem Informasi Persuratan</title>
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="inputpengguna.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="img/logo sip.png" alt="SIP Logo">
+        <div class="logo-text">
+          <h3>Sistem Informasi</h3>
+          <p>Persuratan</p>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-house icon"></i> Dashboard
+        </a>
+        <a href="#" class="menu-item active">
+          <i class="fa-solid fa-user-group"></i> Pengguna
+        </a>
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-envelope-open-text icon"></i> Surat Masuk
+        </a>
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-paper-plane icon"></i> Surat Keluar
+        </a>
+        <a href="#" class="menu-item">
+          <i class="fa-solid fa-file-lines icon"></i> Laporan
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <div class="header">
+        <h1>Data Pengguna</h1>
+        <button class="btn-tambah"><i class="fa-solid fa-user-plus"></i> Tambah data pengguna</button>
+      </div>
+
+      <form class="form">
+        <label>Nama</label>
+        <input type="text" placeholder="">
+
+        <label>Email</label>
+        <input type="email" placeholder="">
+
+        <label>Role</label>
+        <input type="text" placeholder="">
+
+        <label>Password</label>
+        <input type="password" placeholder="">
+
+        <label>Konfirmasi Password</label>
+        <input type="password" placeholder="">
+
+        <div class="button-group">
+          <button type="submit" class="btn-simpan"><i class="fa-solid fa-floppy-disk"></i> SIMPAN</button>
+          <button type="button" class="btn-kembali" id="btnKembali"><i class="fa-solid fa-rotate-left"></i> KEMBALI</button>
+        </div>
+      </form>
+
+      <footer>
+        <p>Copyright © 2025 <span>Sistem.Informasi.Persuratan</span>. All right reserved</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

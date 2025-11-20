@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surat Masuk | Sistem Informasi Persuratan</title>
+  <link rel="stylesheet" href="suratmasuk.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="img/logo sip.png" alt="SIP Logo" />
+        <div class="logo-text">
+          <h3>Sistem Informasi</h3>
+          <p>Persuratan</p>
+        </div>
+      </div>
+
+      <ul class="menu">
+        <li>
+          <a href="#"><i class="fa-solid fa-house"></i> Dashboard</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-user-group"></i> Pengguna</a>
+        </li>
+        <li class="active">
+          <a href="#"><i class="fa-solid fa-envelope-open-text"></i> Surat Masuk</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-paper-plane"></i> Surat Keluar</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-file-lines"></i> Laporan</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1>Surat Masuk</h1>
+
+      <table class="tabel-surat">
+        <thead>
+          <tr>
+            <th>File surat</th>
+            <th>No. Surat</th>
+            <th>Tanggal</th>
+            <th>Pengirim</th>
+            <th>Perihal</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>123/900/2000/1</td>
+            <td>19/09/2025</td>
+            <td>Budi user</td>
+            <td>Surat izin</td>
+            <td>
+              <button class="btn-lihat">Lihat</button>
+              <button class="btn-hapus">Hapus</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <footer>
+        <p>Copyright © 2025 <span>Sistem.Informasi.Persuratan</span>. All right reserved</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+:root {
+    --dark-blue: #1d3b6a; /* Biru tua Sidebar */
+    --active-menu-bg: #4F80C5; /* Biru menu aktif */
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --logout-red: #C0392B; /* Merah untuk Logout */
+    --action-red: #E74C3C; /* Merah untuk Hapus */
+    --action-yellow: #F39C12; /* Kuning untuk Edit */
+    --main-bg: #FFFFFF; /* Latar belakang konten utama */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    background-color: var(--main-bg);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.app-container {
+    display: flex;
+    flex-grow: 1; /* Kontainer utama mengisi ruang */
+}
+
+/* --- Sidebar Styling --- */
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    background-color: var(--dark-blue);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.sidebar-header {
+    padding: 0 20px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-link {
+    display: block;
+}
+
+.logo-image {
+    width: 80px; 
+    height: auto;
+}
+
+.system-name {
+    font-size: 0.9em;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.sidebar-menu {
+    flex-grow: 1;
+    padding: 0; 
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.menu-item i {
+    width: 20px; 
+    text-align: center;
+}
+
+.menu-item.active {
+    background-color: var(--active-menu-bg); 
+    font-weight: bold;
+}
+
+/* --- Main Content Styling --- */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-bg); 
+    padding: 0 0 20px 0; /* Sesuaikan padding agar footer tidak menimpa */
+}
+
+/* Header/Navbar (Hanya judul dan Logout) */
+.navbar {
+    background-color: var(--main-bg);
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+/* Tombol Logout Merah di Kanan Atas */
+.logout-btn {
+    background-color: var(--logout-red);
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; /* Bentuk bulat */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-btn:hover {
+    background-color: #9a2d21;
+}
+
+/* Content Area */
+.content-area {
+    padding: 20px 30px;
+    flex-grow: 1;
+}
+
+/* Tombol Kirim Surat */
+.kirim-surat-btn {
+    background-color: var(--dark-blue);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.kirim-surat-btn:hover {
+    background-color: #142848;
+}
+
+/* --- Table Styling --- */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    border: 1px solid #ddd; 
+}
+
+.data-table th, .data-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border-right: 1px solid #ddd;
+}
+
+.data-table thead tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.data-table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table td:first-child { width: 10%; }
+.data-table td:last-child { 
+    width: 15%; 
+    border-right: none;
+}
+.data-table th:last-child {
+     border-right: none;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start; /* Aksi rata kiri sesuai gambar */
+}
+
+/* Tombol Aksi dalam Tabel */
+.aksi-btn {
+    padding: 3px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--text-dark); /* Warna teks tombol aksi (Hitam) */
+}
+
+.aksi-btn.yellow {
+    background-color: var(--action-yellow);
+    color: var(--text-dark);
+}
+
+.aksi-btn.red {
+    background-color: var(--action-red); 
+    color: var(--text-light); /* Teks putih pada tombol Hapus */
+}
+
+/* --- Footer/Copyright Styling --- */
+.app-footer {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+    border-top: 1px solid #eee;
+    background-color: #f8f8f8
+}

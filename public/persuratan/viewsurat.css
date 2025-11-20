@@ -1,0 +1,238 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+.layout {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background-color: #2d4068;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.text-logo h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.text-logo p {
+    font-size: 13px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    background-color: #5d6d8c;
+}
+
+/* KONTEN */
+.content {
+    flex: 1;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+}
+
+.card {
+    background-color: #2d4068;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    /* FIX MASALAH */
+    height: auto;
+    flex-grow: 0; /* <— MATIKAN YANG BIKIN PANJANG */
+}
+
+
+/* SURAT */
+.surat-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.surat-detail {
+    flex: 1;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.surat-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.surat-image img {
+    width: 85%;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* BUTTON */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+button {
+    border: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button.hapus {
+    background-color: red;
+}
+
+button.hapus:hover {
+    background-color: #c70000;
+}
+
+button.kembali {
+    background-color: gray;
+}
+
+button.kembali:hover {
+    background-color: #555;
+}
+
+/* FOOTER */
+footer {
+    background-color: #d9d9d9;
+    color: black;
+    font-size: 13px;
+    text-align: center;
+    padding: 8px 0;
+    border-top: 1px solid #ccc;
+}
+
+footer .highlight {
+    color: #2d4068;
+    font-weight: bold;
+}
+
+/* Wrapper PDF */
+.pdf-wrapper {
+    width: 100%;
+    max-width: 100%;
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+
+    /* Hilangkan scroll samping */
+    overflow: hidden;
+}
+
+/* PDF Frame */
+.pdf-frame {
+    width: 100%;
+    height: 780px; /* diperbesar */
+    border: none;
+    border-radius: 12px;
+}
+
+/* Tombol */
+.button-group-fixed {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-hapus {
+    background: #e53935;
+    padding: 12px 28px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-hapus:hover {
+    background: #c62828;
+}
+
+.btn-kembali {
+    background: #6c757d;
+    padding: 12px 28px;
+    font-weight: 600;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-kembali:hover {
+    background: #565d63;
+}
+
+/* Info surat */
+.surat-info {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+

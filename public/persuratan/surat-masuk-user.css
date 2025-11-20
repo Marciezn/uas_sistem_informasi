@@ -1,0 +1,417 @@
+/* =====================================
+   VARIABLE GLOBAL
+===================================== */
+:root {
+    --dark-blue: #1d3b6a; 
+    --active-menu-bg: #4F80C5; 
+    --text-dark: #333;
+    --text-light: #fff;
+    --logout-red: #C0392B;
+    --action-blue: #2aa4fc;
+    --action-red: #E74C3C;
+    --main-bg: #ffffff;
+}
+
+/* =====================================
+   RESET
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    background: var(--main-bg);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* =====================================
+   SIDEBAR
+===================================== */
+.sidebar {
+    width: 250px;
+    background-color: var(--dark-blue);
+    color: var(--text-light);
+    min-height: 100vh;
+    padding-top: 20px;
+    position: fixed;         /* FIXED SIDEBAR */
+    left: 0;
+    top: 0;
+}
+
+.logo-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-image {
+    width: 80px;
+}
+
+.sidebar-menu {
+    margin-top: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+.menu-item i {
+    width: 20px;
+    text-align: center;
+}
+
+.menu-item.active {
+    background: var(--active-menu-bg);
+    font-weight: bold;
+}
+
+
+/* =====================================
+   GLOBAL NAVBAR (DARI LAYOUT)
+===================================== */
+.navbar-global {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    height: 60px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 25px;
+    z-index: 999;
+}
+
+
+/* =====================================
+   PAGE CONTENT (KONTEN HALAMAN USER)
+===================================== */
+.page-content {
+    margin-left: 40px;           /* mengikuti sidebar */
+    padding-top: 90px !important; /* TURUN DARI NAVBAR GLOBAL */
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+}
+
+
+/* =====================================
+   HEADER HALAMAN (BUKAN NAVBAR GLOBAL)
+===================================== */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-title {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   BUTTON TAMBAH
+===================================== */
+.btn-add {
+    background-color: var(--action-blue);
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.btn-add:hover {
+    background-color: #188ed8;
+}
+
+
+/* =====================================
+   TABLE STYLE
+===================================== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.data-table th,
+.data-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+    background: #f7f7f7;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   TOMBOL AKSI
+===================================== */
+/* Style tombol aksi */
+.aksi-btn {
+    padding: 6px 12px;
+    font-size: 0.8em;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block; /* supaya sejajar */
+    margin-right: 5px; /* kasih space */
+}
+
+/* Warna-warna tombol */
+.aksi-btn.blue {
+    background: var(--action-blue);
+    color: white;
+}
+
+.aksi-btn.red {
+    background: var(--action-red);
+    color: white;
+}
+
+.aksi-btn.green {
+    background: #27ae60;
+    color: white;
+}
+
+/* Maksimalkan space kolom "Aksi" */
+.data-table td:last-child {
+    white-space: nowrap;
+    padding-right: 20px; /* kasih jarak kanan */
+}
+
+/* Set tombol berderet rapi + jarak */
+.aksi-btn {
+    margin-right: 6px !important;
+    display: inline-block;
+}
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    background: #fff;
+    padding: 12px;
+    text-align: center;
+    font-size: 0.8em;
+    border-top: 1px solid #ddd;
+}
+
+/* FIX tampilan header + tabel + tombol agar sama seperti surat masuk */
+
+/* POSISI KONTEN */
+.content-area {
+    margin-top: 100px;
+    margin-left: 150px;
+    padding: 20px 30px 40px;
+}
+
+/* JUDUL HALAMAN */
+.page-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* TOMBOL +TAMBAH */
+.top-actions {
+    margin-bottom: 15px;
+}
+
+/* TABEL */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.data-table th {
+    background: #f7f7f7;
+    padding: 10px 12px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* TOMBOL AKSI */
+.aksi-btn {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    color: white;
+}
+
+.aksi-btn.blue { background: #2aa4fc; }
+.aksi-btn.green { background: #27ae60; }
+.aksi-btn.red { background: #e74c3c; }
+
+/* Aksi beberapa tombol dalam satu cell */
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+/* ============================
+   CONTENT USER (SEMUA FORM)
+   ============================ */
+
+.content-user {
+    margin-left: 250px;               /* sesuai lebar sidebar */
+    margin-top: 80px;                 /* turun dari navbar */
+    padding: 40px 60px;               /* ruang kanan kiri */
+    width: calc(100% - 250px);        /* responsif */
+    box-sizing: border-box;
+}
+
+/* Judul Halaman */
+.content-user .page-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #1f3769;
+}
+
+/* Label Form */
+.content-user label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Input BIRU */
+.content-user .form-input {
+    width: 100%;
+    padding: 12px;
+    background: #e3efff;
+    border: 1px solid #cfdfff;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.content-user .form-input:focus {
+    border-color: #7aabff;
+    outline: none;
+    box-shadow: 0 0 3px #7aabff;
+}
+
+/* Tombol Aksi di Form */
+.content-user .form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.content-user .btn-save {
+    background: #2ecc71;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.content-user .btn-back {
+    background: #6c757d;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ============================
+   TABLE STYLE (INDEX SURAT)
+   ============================ */
+
+.content-user .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.content-user .data-table th {
+    background: #eef3f8;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f3769;
+}
+
+.content-user .data-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.content-user .data-table tr:hover td {
+    background: #f5f9ff;
+}
+
+/* Tombol Aksi */
+.aksi-btn {
+    padding: 7px 12px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.aksi-btn.blue {
+    background: #3498db;
+}
+
+.aksi-btn.green {
+    background: #27ae60;
+}
+
+.aksi-btn.red {
+    background: #e74c3c;
+}
+
+

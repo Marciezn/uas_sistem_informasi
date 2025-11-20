@@ -1,0 +1,206 @@
+/* ===================================================
+   VARIABEL WARNA
+=================================================== */
+:root {
+    --dark-blue: #1d3b6a;
+    --active-menu-bg: #4f80c5;
+    --active-menu-text: #ffffff;
+    --sidebar-text: white;
+
+    --logout-red: #C0392B;
+
+    --main-bg: #ffffff;
+
+    --green-card: #d8f2d2;
+    --green-text: #2e7d32;
+
+    --blue-card: #d4eaf7;
+    --blue-text: #1565c0;
+
+    --border-color: #ddd;
+    --card-text: #333;
+}
+
+/* ===================================================
+   RESET
+=================================================== */
+body {
+    font-family: poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg);
+}
+
+/* ===================================================
+   SIDEBAR
+=================================================== */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: var(--dark-blue);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 10px;
+}
+
+.logo {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.menu {
+    margin-top: 20px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.menu-item i {
+    margin-right: 10px;
+}
+
+.menu-item.active {
+    background: var(--active-menu-bg);
+    color: var(--active-menu-text);
+    border-left: 5px solid orange;
+}
+
+/* ===================================================
+   NAVBAR
+=================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    height: 60px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    z-index: 900;
+}
+
+.btn-logout {
+    background: var(--logout-red);
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===================================================
+   MAIN CONTENT USER — FIX POSISI & KERAPIAN
+=================================================== */
+.dashboard-container {
+    margin-left: 250px;
+    padding: 90px 60px 40px;
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+}
+
+.title-page {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #1f3769;
+}
+
+/* ===================================================
+   STATISTIK CARD
+=================================================== */
+.stats-wrapper {
+    display: flex;
+    justify-content: center;   /* Tengah */
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.stat-box {
+    flex: 1;
+    max-width: 350px;
+    padding: 35px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+.box-green {
+    background: var(--green-card);
+    color: var(--green-text);
+}
+
+.box-blue {
+    background: var(--blue-card);
+    color: var(--blue-text);
+}
+
+.stat-value {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.stat-label {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* ===================================================
+   TABEL RIWAYAT
+=================================================== */
+.sub-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.05);
+}
+
+.dashboard-table th {
+    background: #eef3f8;
+    padding: 12px 15px;
+    font-weight: 600;
+    color: #1f3769;
+}
+
+.dashboard-table td {
+    padding: 12px 15px;
+    border-top: 1px solid #eee;
+    color: #333;
+}
+
+.dashboard-table tr:hover td {
+    background: #f7fbff;
+}
+
+/* ===================================================
+   FOOTER
+=================================================== */
+.footer {
+    padding: 10px;
+    text-align: center;
+    background: #f8f8f8;
+    font-size: 0.8em;
+    border-top: 1px solid #ddd;
+}
+

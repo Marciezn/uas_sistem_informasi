@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  color: #000;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background: #223b6d;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 15px;
+  margin-bottom: 25px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-text h3 {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.logo-text p {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.2s;
+  font-size: 15px;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background: #1c2f56;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+/* MAIN CONTENT */
+.content {
+  flex: 1;
+  background: #fff;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.btn-tambah {
+  background: #324d7b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-tambah:hover {
+  background: #263d65;
+}
+
+/* FORM */
+.form {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #5272b7;
+  color: #fff;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #e0e0e0;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-simpan {
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-simpan:hover {
+  background: #1faa50;
+}
+
+.btn-kembali {
+  background: #6b7280;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-kembali:hover {
+  background: #555b64;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #333;
+}
+
+footer span {
+  color: #324d7b;
+  font-weight: 600;
+}

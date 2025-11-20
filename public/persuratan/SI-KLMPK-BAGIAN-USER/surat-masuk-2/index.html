@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Persuratan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        <img src="logo sip.png" alt="Logo">
+        <span>Sistem Informasi Persuratan</span>
+    </div>
+
+<main class="main">
+      <!-- Tombol logout -->
+      <button class="logout-btn" id="logoutBtn" title="Logout">
+        <i class="fas fa-sign-out-alt"></i>
+      </button>
+    
+    <ul class="menu">
+        <li>Dashboard</li>
+        <li>Pengguna</li>
+        <li class="active">Surat Masuk</li>
+        <li>Surat Keluar</li>
+        <li>Laporan</li>
+    </ul>
+</div>
+
+<div class="content">
+    <div class="card">
+
+        <div class="info">
+            <p><strong>No. surat:</strong> 1999/19999/199</p>
+            <p><strong>Pengirim:</strong> Alex admin</p>
+            <p><strong>Perihal:</strong> surat kontrak</p>
+        </div>
+
+        <div class="image-area">
+            <img src="download.jpeg" alt="Foto Surat">
+        </div>
+
+        <div class="btn-area">
+            <button class="btn-hapus">Hapus</button>
+            <button class="btn-kembali" onclick="history.back()">Kembali</button>
+        </div>
+
+    </div>
+
+    <footer>
+        Copyright © 2025 Sistem Informasi Persuratan. All right reserved
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

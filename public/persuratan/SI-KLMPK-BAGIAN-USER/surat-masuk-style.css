@@ -1,0 +1,212 @@
+/* =====================================
+   VARIABLE GLOBAL
+===================================== */
+:root {
+    --dark-blue: #1d3b6a; 
+    --active-menu-bg: #4F80C5; 
+    --text-dark: #333;
+    --text-light: #fff;
+    --logout-red: #C0392B;
+    --action-blue: #2aa4fc;
+    --action-red: #E74C3C;
+    --main-bg: #ffffff;
+}
+
+/* =====================================
+   RESET
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    background: var(--main-bg);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* =====================================
+   SIDEBAR
+===================================== */
+.sidebar {
+    width: 250px;
+    background-color: var(--dark-blue);
+    color: var(--text-light);
+    min-height: 100vh;
+    padding-top: 20px;
+    position: fixed;         /* FIXED SIDEBAR */
+    left: 0;
+    top: 0;
+}
+
+.logo-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-image {
+    width: 80px;
+}
+
+.sidebar-menu {
+    margin-top: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+.menu-item i {
+    width: 20px;
+    text-align: center;
+}
+
+.menu-item.active {
+    background: var(--active-menu-bg);
+    font-weight: bold;
+}
+
+
+/* =====================================
+   GLOBAL NAVBAR (DARI LAYOUT)
+===================================== */
+.navbar-global {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    height: 60px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 25px;
+    z-index: 999;
+}
+
+
+/* =====================================
+   PAGE CONTENT (KONTEN HALAMAN USER)
+===================================== */
+.page-content {
+    margin-left: 250px;           /* mengikuti sidebar */
+    padding-top: 90px !important; /* TURUN DARI NAVBAR GLOBAL */
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+}
+
+
+/* =====================================
+   HEADER HALAMAN (BUKAN NAVBAR GLOBAL)
+===================================== */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-title {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   BUTTON TAMBAH
+===================================== */
+.btn-add {
+    background-color: var(--action-blue);
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.btn-add:hover {
+    background-color: #188ed8;
+}
+
+
+/* =====================================
+   TABLE STYLE
+===================================== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.data-table th,
+.data-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+    background: #f7f7f7;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   TOMBOL AKSI
+===================================== */
+.aksi-btn {
+    padding: 5px 10px;
+    font-size: 0.8em;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.aksi-btn.blue {
+    background: var(--action-blue);
+    color: white;
+}
+
+.aksi-btn.red {
+    background: var(--action-red);
+    color: white;
+}
+
+.aksi-btn.green {
+    background: #27ae60;
+    color: white;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    background: #fff;
+    padding: 12px;
+    text-align: center;
+    font-size: 0.8em;
+    border-top: 1px solid #ddd;
+}

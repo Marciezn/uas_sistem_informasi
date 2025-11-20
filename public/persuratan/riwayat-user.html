@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistem Informasi Persuratan - Riwayat Surat</title>
+  <link rel="stylesheet" href="riwayat-user.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Letter_S_icon.svg" alt="logo" />
+        <h2>Sistem Informasi Persuratan</h2>
+      </div>
+
+      <nav>
+        <a href="#" class="menu"><i class="icon">🏠</i> Dashboard</a>
+        <a href="#" class="menu"><i class="icon">📩</i> Surat Masuk</a>
+        <a href="#" class="menu"><i class="icon">✉️</i> Surat Keluar</a>
+        <a href="#" class="menu active"><i class="icon">📜</i> Riwayat</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+      <button class="logout-btn" id="logoutBtn" title="Logout">
+        <i class="fas fa-sign-out-alt"></i>
+      </button>
+
+      <h1>Riwayat Surat</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Jenis Surat</th>
+            <th>No. Surat</th>
+            <th>Tanggal</th>
+            <th>Nama</th>
+            <th>Perihal</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Surat Masuk</td>
+            <td>123/900/202001</td>
+            <td>18/09/2025</td>
+            <td>Alex Widodo</td>
+            <td>Surat Izin</td>
+            <td><button class="lihat-btn">Lihat</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <footer>
+        <p>Copyright © 2025 <span>Sistem Informasi Persuratan.</span> All rights reserved</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      alert('Kamu berhasil logout!');
+    });
+  </script>
+
+  <script src="riwayat-user.js"></script>
+</body>
+</html>
