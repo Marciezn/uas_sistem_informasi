@@ -31,16 +31,15 @@
             </li>
 
             <li class="nav-item">
-                <a href="{{ route('admin.suratkeluar.index') }}" 
-                   class="nav-link {{ request()->routeIs('admin.suratkeluar') ? 'active' : '' }}">
+                <a href="{{ route('admin.suratmasuk.index') }}" 
+                 class="nav-link {{ request()->routeIs('admin.suratmasuk.*') ? 'active' : '' }}">
                     <i class="fa-solid fa-inbox"></i>
                     <p>Surat Masuk</p>
                 </a>
             </li>
-
             <li class="nav-item">
-                <a href="{{ route('admin.suratmasuk.index') }}" 
-                 class="nav-link {{ request()->routeIs('admin.suratmasuk.*') ? 'active' : '' }}">
+                <a href="{{ route('admin.suratkeluar.index') }}" 
+                   class="nav-link {{ request()->routeIs('admin.suratkeluar') ? 'active' : '' }}">
                     <i class="fa-solid fa-paper-plane"></i>
                     <p>Surat Keluar</p>
                 </a>

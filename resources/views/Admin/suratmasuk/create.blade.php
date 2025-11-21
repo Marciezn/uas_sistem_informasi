@@ -2,7 +2,7 @@
   <main class="content">
     <div class="header">
       <h1>Tambah Surat Masuk</h1>
-      <a href="{{ route('admin.suratkeluar.index') }}" class="btn-tambah">
+      <a href="{{ route('admin.suratmasuk.index') }}" class="btn-tambah">
         <i class="fa-solid fa-arrow-left"></i> Kembali
       </a>
     </div>
