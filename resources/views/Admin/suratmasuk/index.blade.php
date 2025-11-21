@@ -1,10 +1,8 @@
 <x-layoutAdmin>
   <main class="main-content">
-    <h1>Surat Masuk</h1>
+    <h1>Surat Keluar</h1>
 
-    <a href="{{ route('admin.suratmasuk.create') }}" class="btn-tambah">
-      <i class="fa-solid fa-plus"></i> Tambah Surat
-    </a>
+    
 
     <table class="tabel-surat">
       <thead>

@@ -3,9 +3,7 @@
 <div class="page-header">
     <h1 class="page-title">Surat Masuk</h1>
 
-    <a href="{{ route('user.suratmasuk.create') }}" class="btn-add">
-        + Tambah
-    </a>
+
 </div>
 
 <table class="data-table">
