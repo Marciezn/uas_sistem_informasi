@@ -2,9 +2,7 @@
   <main class="main-content">
     <h1>Surat Keluar</h1>
 
-    <a href="{{ route('admin.suratkeluar.create') }}" class="btn-tambah">
-      <i class="fa-solid fa-paper-plane"></i> Kirim Surat
-    </a>
+   
 
     <table class="tabel-surat">
       <thead>
